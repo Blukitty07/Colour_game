@@ -99,6 +99,16 @@ class Play:
     Interface for playing the colour game
     """
 
+    def __init__(self, how_many):
+        self.play_box = Toplevel()
+
+        self.game_frame = Frame(self.play_box)
+        self.game_frame.grid(padx=10, pady=10)
+
+        self.game_heading_label = Label(self.game_frame, text=f"Round 0 of {how_many}",
+                                        font=("Arial", "16", "bold"))
+        self.game_heading_label.grid(row=0)
+
 
 # main routine
 if __name__ == "__main__":
